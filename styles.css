@@ -1,11 +1,5 @@
 
-/********************* NOTES ************************
-The basic resets below allow you to create your own styling
-without having to fight some of the most annoying built in 
-agent user styles.
-****************************************************/
-
-/************* Basic Resets ***************/
+//********************* CSS RESET ************************/
 
 h1, h2, h3, h4, p, ul, ol, blockquote {
 	margin: 0;
@@ -16,125 +10,117 @@ nav ul, nav ol {
 	list-style-type: none;
 }
 
-/******** Additional resets *********/
-a { text-decoration:none; }
+a {
+	text-decoration: none;
+}
 
 img {
 	display: block;
-	max-width:100%; 
+	max-width: 100%;
 	height: auto;
 }
 
-* { box-sizing: border-box; }
-
-/************ End CSS Reset  *************/
-
-
-/********************* NOTES ************************
-Below are the only colors I have used. Choose four new
-colors and do a find and replace to replace the hex codes.
-****************************************************/
-
-
-/*********** Colors ***********
-
-primary = #b5b5b5;
-secondary = #efefef;
-accent = #4574b5
-text default = #333333;
-
-
-********************************/
-
-
-/************* Basic Page Rules ************/
-
-
-/********************* NOTES ************************
-I set the background of the page to dark and the main
-font to Georgia for most of the type. The header font
-is set to Arial. You could get two fonts that work well
-together and replace these choices. You may have to adjust
-sizing and spacing as well.
-****************************************************/
-
-
-body {
-	font-family:Georgia;
-	color:#333;
-	background:#333;
+* {
+	box-sizing: border-box;
 }
 
-/************* typography ************/
+/********************* COLOR PALETTE ************************
+Primary: #1f3a5f
+Secondary: #f4f6f8
+Accent: #3b82f6
+Text: #1f2933
+************************************************************/
 
-h1, h2, h3, h4, nav { 
-	font-family:Arial;
-	font-weight:bold; 
+/********************* BASE PAGE ************************/
+
+body {
+	font-family: Georgia, serif;
+	color: #1f2933;
+	background: #1f2933;
+}
+
+/********************* TYPOGRAPHY ************************/
+
+h1, h2, h3, h4, nav {
+	font-family: Arial, sans-serif;
+	font-weight: bold;
 }
 
 h1 {
-	font-size:250%;
-	margin-bottom:1em;
+	font-size: 240%;
+	margin-bottom: 0.5em;
 }
 
 h2 {
-	font-size:170%;
-	margin-bottom:1em;
+	font-size: 170%;
+	margin-bottom: 1em;
 }
 
-h3 { 
-	font-size:135%;
-	margin-bottom:1em;
+h3 {
+	font-size: 135%;
+	margin-bottom: 0.8em;
 }
 
-h4 { 
-	font-size:115%;
-	margin-bottom:.5em;
+h4 {
+	font-size: 115%;
+	margin-bottom: 0.5em;
 }
-	
 
 p {
-	line-height:1.5em;
-	margin-bottom:1em;
+	line-height: 1.6em;
+	margin-bottom: 1em;
 }
 
-a { color: #4574b5; }
+a {
+	color: #3b82f6;
+}
 
-.social { font-size:175%; }
+.social {
+	font-size: 170%;
+}
 
-.centered { text-align:center; }
+.centered {
+	text-align: center;
+}
 
-/****************** Grid ******************/
+/********************* SECTIONS ************************/
 
-.primary { background:#b5b5b5; }
-.secondary { background:#efefef; }
+.primary {
+	background: #1f3a5f;
+	color: #ffffff;
+}
 
+.secondary {
+	background: #f4f6f8;
+}
 
-/****************** Header and Main Navigation ****************/
+/********************* HEADER ************************/
 
 header {
-	padding: 20px;
+	padding: 25px 20px;
 }
 
 header .wrapper {
 	display: flex;
 	flex-direction: column-reverse;
-	flex-wrap: wrap;
 }
 
 .logo-container {
 	display: flex;
-	flex-direction: row-reverse;
-	justify-content: flex-end;
+	align-items: center;
+	gap: 15px;
 }
 
 #logo {
-	margin-right:20px;
+	width: 90px;
+	height: 90px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 3px solid #ffffff;
 }
 
-
 #mainnav {
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 
 #mainnav ul {
@@ -143,156 +129,134 @@ header .wrapper {
 }
 
 #mainnav ul li a {
-	display:block;
-	color: #4574b5;
-	border-left: 2px solid #4574b5;
-	padding:0 20px;
-	font-size:20px;
+	display: block;
+	color: #ffffff;
+	border-left: 2px solid rgba(255, 255, 255, 0.4);
+	padding: 0 18px;
+	font-size: 18px;
 }
-
-/********************* NOTES ************************
-Removes the border on the first link...
-****************************************************/
 
 #mainnav ul li:first-of-type a {
-	border:none;
+	border: none;
 }
 
-
-/***************** Section Specific Rules *****************/
+/********************* WORK SECTION ************************/
 
 #work {
-	background:#fff;
-	padding: 20px;
+	background: #ffffff;
+	padding: 30px 20px;
 }
 
-#work img, .additional-projects img {
+#work img {
 	width: 100%;
 	margin-bottom: 10px;
 }
 
-.featured, .projects, #page-template #work section {
+.featured,
+.projects {
 	margin-bottom: 40px;
 }
 
-#about-contact, .additional-projects {
-	padding: 20px;
+/********************* ABOUT + CONTACT ************************/
+
+#about-contact {
+	padding: 30px 20px;
 }
 
 #about-contact img {
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 
-/********************* NOTES ************************
-I added all this margin to the bottom of the footer so
-that when you click the link for "about" or "contact" in
-the main nav, there is room for them to go all the way to
-the top of the page.
-****************************************************/
+/********************* FOOTER ************************/
 
 footer {
 	padding: 20px;
-	margin-bottom:600px;
+	margin-bottom: 500px;
 }
 
+/********************* RESPONSIVE ************************/
+
 @media only screen and (min-width: 650px) {
+
 	#work {
-		padding: 20px 10px;
+		padding: 30px 10px;
 	}
-	
-	#work article, h2 {
+
+	#work article,
+	h2 {
 		padding: 0 10px;
 	}
-	
-	.projects, #page-template #work section  {
+
+	.projects {
 		display: flex;
 		flex-wrap: wrap;
 	}
-	
-	.projects article, #page-template #work section article {
+
+	.projects article {
 		width: 50%;
+		padding: 10px;
 	}
-	
-	.additional-projects .wrapper{
-		display: flex;
-		flex-wrap: wrap;
-	}
-	
-	.additional-projects h2 {
-		flex-basis: 100%;
-	}
-	
-	.additional-projects article {
-		width: 50%;
-		padding: 0 10px;
-	}
-	
+
 	#about-contact {
 		padding: 0;
 	}
-	
+
 	#about-contact .wrapper {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: flex-start;
-		padding: 20px 10px;
+		padding: 30px 10px;
 	}
-	
+
 	#about-contact .profile-photo {
 		flex: 1;
 		padding: 0 10px;
-		width: 100%;
 	}
-	
+
 	#about-contact article {
 		padding: 0 10px;
 	}
-	
+
 	#about-contact article:first-of-type {
 		flex: 2;
 	}
-	
+
 	#about-contact article:last-of-type {
 		flex-basis: 100%;
 	}
-	
 }
 
 @media only screen and (min-width: 768px) {
-	
+
 	.featured {
 		display: flex;
+		gap: 20px;
 	}
-	
+
 	.featured article {
 		flex: 1;
 	}
-	
-	.additional-projects article {
-		width: 25%;
-	}
-	
+
 	#about-contact .wrapper {
 		flex-wrap: nowrap;
 	}
-	
+
 	#about-contact article:last-of-type {
 		flex: 2;
-		flex-basis: 0;
 	}
 }
 
 @media only screen and (min-width: 1040px) {
+
 	.wrapper {
 		width: 1020px;
 		margin: auto;
 	}
-	
+
 	header .wrapper {
 		padding: 0 10px;
 	}
-	
-	/*Change the width here to 33% if you want three articles in a row*/
+
 	.projects article {
 		width: 25%;
 	}
